@@ -3,3 +3,6 @@
 
 Seonghwan/data/Training_Essay_Data.csv
 ensemble_model/data
+
+simple_copy/simple_env
+simple_copy/data/combined_unique.csv
