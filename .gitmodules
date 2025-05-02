@@ -1,0 +1,3 @@
+[submodule "ai_detect"]
+	path = ai_detect
+	url = git@github.com:SunahLee00/ai-detector-backend.git
