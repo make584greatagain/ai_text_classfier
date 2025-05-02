@@ -63,6 +63,15 @@ generalisation.
 \subsection{Independent Test Set Evaluation}  % -- 4.F --
 % -- Domain-shift performance drop discussion --
 When models were applied to the external test set, all experienced a
-decline in accuracy, underscoring domain-shift and data distribution
+decline in accuracy as shown in picture \cref{fig:model_against_independent}, underscoring domain-shift and data distribution
 challenges. This performance drop indicates that robust, adaptive
 detectors are necessary for real-world deployment.
+
+\begin{figure}[tb]
+  \centering
+  \includegraphics[width=\linewidth]{model_against_independent.pdf}
+  \vspace{-20pt}
+  \caption{Model accuracy against independent dataset}
+  \label{fig:model_against_independent}
+\end{figure} 
+
