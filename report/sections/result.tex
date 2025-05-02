@@ -29,7 +29,16 @@ substantial compute and tuning to sustain top‐level results.
 Detailed analysis revealed an asymmetry: models were consistently more
 accurate at detecting AI‐generated content than human‐written text. On
 average, AI‐text detection exceeded human‐text detection by
-\textbf{\{DELTA\_asym\}}\%.
+\textbf{\{DELTA\_asym\}}\%. The details can be found at \cref{fig:asymmetry}.
+
+\begin{figure}[h!]
+  \centering
+
+  \subcaptionbox{Detect human-written accuracy against independent dataset \label{fig:image1}}{\includegraphics[width=\linewidth]{symmetric_1.jpeg}}\\
+  \subcaptionbox{Detect AI-generated accuracy against independent dataset\label{fig:image2}}{\includegraphics[width=\linewidth]{symmetric_2.jpeg}}\\
+  \caption{Asymmetry accuracy}
+  \label{fig:asymmetry}
+\end{figure}
 
 % -- Paragraph 5: Cross-reference to Table & Figure --
 Key numbers are summarised in Table~\ref{tab:results} and visualised in
@@ -55,10 +64,10 @@ BERT (fine–tuned)      & XX\% & XX\% & XX\% & XX \\
 \end{table}
 
 % ===================== Figure template ==========================
-\begin{figure}[tb] % -- Accuracy bar/chart placeholder --
-\centering
-\includegraphics[width=\linewidth]{accuracy_plot.pdf}  % <-- add figure
-\caption{Accuracy comparison of baseline and advanced models on
-in–domain (Test) vs. out–of–domain (External) datasets.}%
-\label{fig:accuracy}
-\end{figure}
+% \begin{figure}[tb] % -- Accuracy bar/chart placeholder --
+% \centering
+% \includegraphics[width=\linewidth]{accuracy_plot.pdf}  % <-- add figure
+% \caption{Accuracy comparison of baseline and advanced models on
+% in–domain (Test) vs. out–of–domain (External) datasets.}%
+% \label{fig:accuracy}
+% \end{figure}
