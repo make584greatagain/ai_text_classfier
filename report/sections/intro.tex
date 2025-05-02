@@ -1,0 +1,21 @@
+
+\section{Introduction}  % -- Section title --
+
+% -- Paragraph 1: LLMs reshape content pipelines --
+Large language models (LLMs) such as GPT\textendash4 and BERT have enabled journalists, researchers, and casual users to produce fluent text within seconds, reshaping digital content pipelines. Yet the same fluency blurs the boundary between authentic and machine\textendash generated prose, complicating fact\textendash checking, plagiarism detection, and platform moderation. Conventional detectors---rule\textendash based filters or shallow classifiers trained on \emph{n}\textendash gram features---have proven brittle as model sophistication grows.
+
+% -- Paragraph 2: Domain-shift problem in prior detectors --
+Recent studies report accuracy losses of 15--25\% when detectors trained on GPT\textendash2 outputs confront GPT\textendash4 samples, underscoring a persistent domain\textendash shift problem. Moreover, most published benchmarks evaluate only in\textendash distribution test sets, leaving generalisation to unseen topics or newer models untested.
+
+% -- Bridge sentence introducing contributions --
+This paper addresses those gaps through three contributions:
+
+% -- Numbered list of contributions --
+\begin{enumerate}  % 1)–3) contributions
+    \item \textbf{Cross-paradigm benchmark}: We implement and tune six detectors---classical (Naïve Bayes, Logistic Regression), gradient-boosting (CatBoost, LightGBM), and deep (fine-tuned Logistic Regression)---under a unified preprocessing pipeline.
+    \item \textbf{Independent evaluation}: Beyond the Kaggle Detect AI-Generated Text corpus, we curate a 100-sample, topic-balanced external test set spanning ten knowledge domains to quantify out-of-distribution (OOD) performance.
+    \item \textbf{Bias analysis}: We dissect error patterns and show that every model is markedly better at flagging AI-generated passages than authentic human writing, revealing a systematic recall imbalance.
+\end{enumerate}
+
+% -- Final sentence summarizing implications --
+Our findings highlight the need for domain-adaptive training, balanced corpora, and explainable-AI tooling to build detectors that remain reliable as LLM technology continues to evolve.

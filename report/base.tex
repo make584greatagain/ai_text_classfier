@@ -1,0 +1,67 @@
+% ===============================================================
+%  IEEE Conference Paper — Overleaf-ready template (5 authors)
+% ===============================================================
+\documentclass[conference]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+% ---------- Title ----------
+\title{Advancements in Detecting AI-Generated Text:\\
+       Comprehensive Analysis and Future Challenges}
+
+% ---------- Authors & Affiliation ----------
+\author{
+    \IEEEauthorblockN{Atishay Jain}
+    \IEEEauthorblockA{Department of Computer Science\\
+        Illinois Institute of Technology\\
+        Chicago, United States\\
+        \texttt{\{email or ORCID\}}}
+    \and
+    \IEEEauthorblockN{Sunah Lee}
+    \IEEEauthorblockA{Department of Computer Science\\
+        Illinois Institute of Technology\\
+        Chicago, United States\\
+        \texttt{\{email or ORCID\}}}
+    \and
+    \IEEEauthorblockN{Seonghwan Lim}
+    \IEEEauthorblockA{Department of Computer Science\\
+        Illinois Institute of Technology\\
+        Chicago, United States\\
+        \texttt{\{slim24@hawk.iit.edu\}}}
+    \and
+    \IEEEauthorblockN{Lang Liu}
+    \IEEEauthorblockA{Department of Computer Science\\
+        Illinois Institute of Technology\\
+        Chicago, United States\\
+        \texttt{\{email or ORCID\}}}
+    \and
+    \IEEEauthorblockN{Mansi Pathak}
+    \IEEEauthorblockA{Department of Computer Science\\
+        Illinois Institute of Technology\\
+        Chicago, United States\\
+        \texttt{\{email or ORCID\}}}
+}
+
+% ---------- Document ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Large language models (LLMs) now generate text that is virtually indistinguishable from human prose, complicating authenticity checks in journalism, academia, and social media. We benchmark classical algorithms (Multinomial Naïve Bayes, Logistic Regression), gradient-boosting methods (CatBoost, LightGBM), and a fine-tuned Transformer (BERT) on the public Detect AI-Generated Text corpus. After rigorous preprocessing and hyper-parameter search, CatBoost delivers the top accuracy of \textbf{\{ACC\_test\}}\% and a ROC-AUC of \textbf{\{AUC\_test\}}. When evaluated on an external, topic-balanced set, accuracy drops by \textbf{\{ΔACC\_ext\}}\%, exposing a domain-adaptation gap. Error analysis reveals that all models detect AI-generated passages more readily than human-written ones, suggesting feature-level bias. We discuss dataset expansion, ensemble calibration, and explainable-AI tooling as practical next steps toward robust, transparent detectors.
+\end{abstract}
+
+\begin{IEEEkeywords}
+AI-generated text detection; large language models; text classification; domain adaptation; explainable AI
+\end{IEEEkeywords}
+
+\input{sections/intro.tex}
+\input{sections/related_works.tex}
+\input{sections/implementation.tex}
+\input{sections/evaluation.tex}
+\input{sections/result.tex}
+\input{sections/conclusion.tex}
+
+\bibliographystyle{IEEEtran}
+
+\end{document}
