@@ -1,0 +1,10 @@
+MODEL_NAME = "bert-base-uncased"
+MAX_LENGTH = 128
+NUM_LABELS = 2
+OUTPUT_DIR = "./bert_detector"
+MODEL_SAVE_PATH = "./bert_detector/model"
+NUM_EPOCHS = 4
+BATCH_SIZE = 16
+LEARNING_RATE = 2e-5
+WEIGHT_DECAY = 0.01
+SEED = 42
