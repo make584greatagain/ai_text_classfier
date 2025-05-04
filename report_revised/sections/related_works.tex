@@ -1,0 +1,41 @@
+% -----------------------------------------------------------------
+% Related Works section (insert after Introduction)
+% -----------------------------------------------------------------
+\section{Related Works}
+
+% -- Paragraph 1: Early rule-based & classic ML approaches ----------
+Early attempts to distinguish AI-generated text relied on rule-based
+systems and classic machine-learning algorithms such as
+\emph{Multinomial Naïve Bayes}~\cite{mccallum1998naivebayes} and
+\emph{Support Vector Machines (SVM)}~\cite{joachims1998svm}.
+These methods exploited surface-level linguistic features—word-frequency
+profiles, grammatical patterns, stylistic markers—but their effectiveness
+declined as text generators grew more sophisticated.
+
+% -- Paragraph 2: Rise of transformer-based deep learning ------------
+With the advent of deep learning, \emph{Transformer} architectures—
+notably \emph{BERT}~\cite{devlin2019bert} and \emph{GPT} variants~\cite{radford2019gpt}—
+became the cornerstone of state-of-the-art detectors thanks to their rich
+contextual encoding. Fine-tuning these pre-trained models on detection
+datasets routinely yields large gains in both accuracy and robustness.
+
+% -- Paragraph 3: Gradient boosting techniques ----------------------
+In parallel, tree-based gradient-boosting families such as
+\emph{XGBoost}~\cite{chen2016xgboost},
+\emph{LightGBM}~\cite{ke2017lightgbm}, and
+\emph{CatBoost}~\cite{prokhorenkova2018catboost}
+have proven highly competitive for text-classification tasks—
+including AI-text detection—because they handle high-dimensional sparse
+features and capture complex interactions with minimal tuning.
+
+% -- Paragraph 4: Remaining challenges (domain shift, interpretability) --
+Despite these advances, recent studies report sharp performance drops
+when detectors face outputs from newer language models or unseen
+domains, exposing domain-shift vulnerability and interpretability
+limitations.
+
+% -- Paragraph 5: Our study's position -----------------------------
+Building on these insights, we benchmark representative linear,
+boosting, and transformer detectors, quantify their trade-offs, and
+outline research directions for more adaptive and transparent
+AI-generated-text screening.

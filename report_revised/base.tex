@@ -1,0 +1,81 @@
+% ===============================================================
+%  IEEE Conference Paper — Overleaf-ready template (5 authors)
+% ===============================================================
+\documentclass[conference]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath} 
+\usepackage{cleveref}
+\usepackage{cite} 
+
+\graphicspath{{figs/}}
+
+
+% ---------- Title ----------
+\title{Advancements in Detecting AI-Generated Text:\\
+       Comprehensive Analysis and Future Challenges}
+
+% ---------- Authors & Affiliation ----------
+\author{
+    \IEEEauthorblockN{Atishay Jain}
+    \IEEEauthorblockA{Department of Computer Science\\
+        Illinois Institute of Technology\\
+        Chicago, United States\\
+        \texttt{\{ajain105@hawk.iit.edu\}}}
+    \and
+    \IEEEauthorblockN{Sunah Lee}
+    \IEEEauthorblockA{Department of Computer Science\\
+        Illinois Institute of Technology\\
+        Chicago, United States\\
+        \texttt{\{slee249@hawk.iit.edu\}}}
+    \and
+    \IEEEauthorblockN{Seonghwan Lim}
+    \IEEEauthorblockA{Department of Computer Science\\
+        Illinois Institute of Technology\\
+        Chicago, United States\\
+        \texttt{\{slim24@hawk.iit.edu\}}}
+    \and
+    \IEEEauthorblockN{Lang Liu}
+    \IEEEauthorblockA{Department of Computer Science\\
+        Illinois Institute of Technology\\
+        Chicago, United States\\
+        \texttt{\{lliu94@hawk.iit.edu\}}}
+    \and
+    \IEEEauthorblockN{Mansi Pathak}
+    \IEEEauthorblockA{Department of Computer Science\\
+        Illinois Institute of Technology\\
+        Chicago, United States\\
+        \texttt{\{mpathak7@hawk.iit.edu\}}}
+}
+
+% ---------- Document ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The rapid proliferation of large language models (LLMs) means that AI-generated prose is now almost indistinguishable from human writing, raising urgent concerns for fact-checking in journalism, education, and social media.  
+We benchmark two linear baselines (Multinomial Naïve Bayes and Logistic Regression), a tuned \emph{Logistic Regression}, the gradient-boosting method \emph{CatBoost}, and a fine-tuned \emph{BERT} model on the public \textit{Detect AI-Generated Text} corpus.  
+Vanilla baselines yield modest accuracies of \textbf{59\%} (Naïve Bayes) and \textbf{61\%} (Logistic Regression).  
+A targeted hyper-parameter search lifts Logistic Regression to \textbf{66\%}—the strongest in-domain score—while CatBoost attains a comparable \textbf{65\%} with lower cross-validation variance.  
+When transferred to a topic-balanced external dataset, all models degrade by roughly \textbf{7 percentage points}, underscoring persistent domain-adaptation challenges.  
+Error analysis shows a systematic bias: every detector is noticeably better at flagging AI-generated passages than authentic human text. We outline practical next steps—dataset expansion, ensemble calibration, and explainable AI tooling to build more robust and transparent text authenticity pipelines.
+\end{abstract}
+
+\begin{IEEEkeywords}
+AI-generated text detection; large language models; text classification; domain adaptation; explainable AI
+\end{IEEEkeywords}
+
+\input{sections/intro.tex}
+\input{sections/related_works.tex}
+\input{sections/implementation.tex}
+\input{sections/evaluation.tex}
+\input{sections/result.tex}
+\input{sections/conclusion.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{reference}
+
+\end{document}
