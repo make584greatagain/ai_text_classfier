@@ -17,7 +17,16 @@ generalisation issues on independently sourced data.
 Results also exposed substantial asymmetry: detectors showed higher
 accuracy for AI‐generated passages than for human‐written ones, implying
 potential training‐data bias and underscoring the need for balanced,
-representative corpora.
+representative corpora. The details can be found at \cref{fig:asymmetry}.
+
+\begin{figure}[h!]
+  \centering
+
+  \subcaptionbox{Detect human-written accuracy against independent dataset \label{fig:image1}}{\includegraphics[width=\linewidth]{symmetric_1.jpeg}}\\
+  \subcaptionbox{Detect AI-generated accuracy against independent dataset\label{fig:image2}}{\includegraphics[width=\linewidth]{symmetric_2.jpeg}}\\
+  \caption{Asymmetry accuracy}
+  \label{fig:asymmetry}
+\end{figure}
 
 % -- Paragraph 3: Future directions --
 Future research should prioritise robustness to emerging generative
